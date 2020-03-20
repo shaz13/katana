@@ -17,17 +17,17 @@ ns_train = api.namespace('training', description='Training operations')
 ns_infer = api.namespace('inference', description='Inference operations')
 ns_info = api.namespace('info', description='API information')
 
-@ns_info.route('/train')
+@ns_info.route('/isalive')
 class IsAlive(Resource):
     def get(self):
         return {'success': 'I am very much up :)'}
 
-@ns_train.route('/predict')
+@ns_train.route('/train')
 class Training(Resource):
     def get(self):
         return {'success': 'Training pipeline'}
 
-@ns_infer.route('/isalive')
+@ns_infer.route('/predict')
 class Inference(Resource):
     def get(self):
         return {'success': 'Inference pipeline'}
