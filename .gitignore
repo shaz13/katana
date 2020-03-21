@@ -231,3 +231,5 @@ $RECYCLE.BIN/
 .env
 
 # End of https://www.gitignore.io/api/linux,macos,flask,python,windows
+
+*.pkl
