@@ -33,7 +33,7 @@ class Train(Resource):
             df = pd.read_csv(file)
 
         train, valid = self._split_dataset(df, 0.20, 12345)
-        predictors   = df.columns[:-1]
+        predictors = df.columns[:-1]
         
         clf = LogisticRegression(C=0.1, solver='lbfgs')
         clf.fit(X=train[predictors], y=train[response])
