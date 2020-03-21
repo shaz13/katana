@@ -2,7 +2,6 @@ import yaml
 import logging
 
 from flask import Flask
-from flask_restplus import Resource, Api
 from apis import api
 
 with open(r'config.yml') as file:
