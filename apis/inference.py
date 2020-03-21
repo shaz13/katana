@@ -18,7 +18,7 @@ personModel = api.model('PersonDiabetes', {
 })
 
 
-@api.route('/predict')
+@api.route('/UCIDiabetes')
 @api.doc(personModel)
 @api.expect(personModel)
 class Inference(Resource):
