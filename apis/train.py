@@ -38,7 +38,7 @@ class Train(Resource):
         clf = LogisticRegression(C=0.1, solver='lbfgs')
         clf.fit(X=train[predictors], y=train[response])
 
-        self._persist_to_disk(clf, MODEL_ROOT + "log_reg.pkl")
+        self._persist_to_disk(clf, MODEL_ROOT / "log_reg.pkl")
         validation_predictions = clf.predict_proba(valid[predictors])[:, 1]
         score = round(roc_auc_score(valid[[response]], validation_predictions), 3)
 
