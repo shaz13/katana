@@ -45,7 +45,7 @@ class Train(Resource):
         return {
             "success": "Training pipeline successful",
             "message" : f"Succesfully Trained in {datetime.now() - start_time}", #.seconds
-            "metric" : f"roc_auc_score -: {score}",
+            "metric" : f"roc_auc_score : {score}",
             "status_code" : 200,
             }
 
