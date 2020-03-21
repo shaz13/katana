@@ -11,7 +11,7 @@ with open(r'config.yml') as file:
 
 
 app = Flask(__name__)
-api = Api(app, version='1.0', title='Katana ML API', description='A boiler plate production level model deployement',)
+api = Api(app, version='0.1', title='Katana ML API', description='A boiler plate production level model deployement',)
 
 gunicorn_error_logger = logging.getLogger('gunicorn.error')
 app.logger.handlers.extend(gunicorn_error_logger.handlers)
