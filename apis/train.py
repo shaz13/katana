@@ -6,7 +6,7 @@ from numpy.random import RandomState
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from datetime import datetime
-from flask_restplus import Namespace, Resource, fields
+from flask_restplus import Namespace, Resource
 from apis.config import MODEL_ROOT, TEMP_CSV
 
 api = Namespace('train', description='Namespace for training')
@@ -16,11 +16,12 @@ api = Namespace('train', description='Namespace for training')
 class Train(Resource):
 
     def get(self):
+
         return self.train(target_var="Outcome")
 
     def train(self, file=None, target_var=None):
 
-        # curretnly it's having nothing as i/p
+        #  curretnly it's having nothing as i/p
         start_time = datetime.now()
 
         if target_var is None:
@@ -28,7 +29,7 @@ class Train(Resource):
         else:
             response = target_var
 
-        if file is None:  # sample file
+        if file is None: #  sample file
             df = pd.read_csv(TEMP_CSV)
         else:
             df = pd.read_csv(file)
@@ -38,10 +39,8 @@ class Train(Resource):
 
         clf = LogisticRegression(C=0.1, solver='lbfgs')
         clf.fit(X=train[predictors], y=train[response])
-
-        end_time = datetime.now()
-
-        self._persist_to_disk(clf, MODEL_ROOT)
+        self._persist_to_disk(clf, MODEL_ROOT / "log_reg.pkl")
+        
         validation_predictions = clf.predict_proba(valid[predictors])[:, 1]
         score = round(roc_auc_score(
             valid[[response]], validation_predictions), 3)
@@ -60,8 +59,7 @@ class Train(Resource):
 
         state = RandomState(seed)
         validation_indexes = state.choice(df.index,
-                                          int(len(df.index) *
-                                              validation_percentage),
+                                          int(len(df.index) * validation_percentage),
                                           replace=False
                                           )
         training_set = df.loc[~df.index.isin(validation_indexes)].copy()
@@ -81,4 +79,4 @@ class Train(Resource):
         else:
             return {
                 "message": "Failed to save the model :("
-            }
+                }
