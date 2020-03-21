@@ -1,92 +1,61 @@
-werkzeug - INFO -  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
-werkzeug - INFO - 127.0.0.1 - - [09/Mar/2020 22:24:52] "GET /isalive HTTP/1.1" 200 -
-main - ERROR - Exception on /isalive [GET]
-Traceback (most recent call last):
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/api.py", line 325, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "main.py", line 17, in get
-    app.logging.info("Ho")
-AttributeError: 'Flask' object has no attribute 'logging'
-main - ERROR - Exception on /isalive [GET]
-Traceback (most recent call last):
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/api.py", line 325, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "main.py", line 17, in get
-    app.logging.info("Ho")
-AttributeError: 'Flask' object has no attribute 'logging'
-main - ERROR - Exception on /isalive [GET]
-Traceback (most recent call last):
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/api.py", line 325, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "main.py", line 17, in get
-    app.logging.info("Ho")
-AttributeError: 'Flask' object has no attribute 'logging'
-main - ERROR - Exception on /isalive [GET]
-Traceback (most recent call last):
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/api.py", line 325, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "main.py", line 17, in get
-    app.logging.info("Ho")
-AttributeError: 'Flask' object has no attribute 'logging'
-main - ERROR - Exception on /isalive [GET]
-Traceback (most recent call last):
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/api.py", line 325, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "main.py", line 17, in get
-    class IsAlive(Resource):
-AttributeError: 'Flask' object has no attribute 'logging'
-main - ERROR - Exception on /training/ [GET]
-Traceback (most recent call last):
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/api.py", line 325, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/shazbyte/anaconda3/envs/katana/lib/python3.8/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "main.py", line 30, in get
-    app.logging.info("Ho")
-AttributeError: 'Flask' object has no attribute 'logging'
+[2020-03-21 02:12:05 +0530] [3513] [INFO] Starting gunicorn 20.0.4
+[2020-03-21 02:12:05 +0530] [3513] [INFO] Listening at: http://0.0.0.0:9000 (3513)
+[2020-03-21 02:12:05 +0530] [3513] [INFO] Using worker: sync
+[2020-03-21 02:12:05 +0530] [3516] [INFO] Booting worker with pid: 3516
+[2020-03-21 02:12:05 +0530] [3517] [INFO] Booting worker with pid: 3517
+[2020-03-21 02:12:05 +0530] [3518] [INFO] Booting worker with pid: 3518
+[2020-03-21 02:12:05 +0530] [3519] [INFO] Booting worker with pid: 3519
+[2020-03-21 02:12:06 +0530] [3516] [DEBUG] this will show in the log
+[2020-03-21 02:12:06 +0530] [3517] [DEBUG] this will show in the log
+[2020-03-21 02:12:06 +0530] [3518] [DEBUG] this will show in the log
+[2020-03-21 02:12:06 +0530] [3519] [DEBUG] this will show in the log
+[2020-03-21 02:14:38,972] INFO in main: Received index load
+[2020-03-21 02:14:38 +0530] [3519] [INFO] Received index load
+[2020-03-21 02:14:48,976] INFO in main: Received index load
+[2020-03-21 02:14:48 +0530] [3517] [INFO] Received index load
+[2020-03-21 02:15:03,678] INFO in main: Received index load
+[2020-03-21 02:15:03 +0530] [3518] [INFO] Received index load
+[2020-03-21 02:16:18 +0530] [3513] [INFO] Handling signal: int
+[2020-03-21 02:16:18 +0530] [3518] [INFO] Worker exiting (pid: 3518)
+[2020-03-21 02:16:18 +0530] [3516] [INFO] Worker exiting (pid: 3516)
+[2020-03-21 02:16:18 +0530] [3519] [INFO] Worker exiting (pid: 3519)
+[2020-03-21 02:16:18 +0530] [3517] [INFO] Worker exiting (pid: 3517)
+[2020-03-21 02:16:18 +0530] [3513] [INFO] Shutting down: Master
+[2020-03-21 10:52:08 +0530] [4002] [INFO] Starting gunicorn 20.0.4
+[2020-03-21 10:52:08 +0530] [4002] [INFO] Listening at: http://0.0.0.0:9000 (4002)
+[2020-03-21 10:52:08 +0530] [4002] [INFO] Using worker: sync
+[2020-03-21 10:52:08 +0530] [4005] [INFO] Booting worker with pid: 4005
+[2020-03-21 10:52:08 +0530] [4006] [INFO] Booting worker with pid: 4006
+[2020-03-21 10:52:08 +0530] [4007] [INFO] Booting worker with pid: 4007
+[2020-03-21 10:52:08 +0530] [4008] [INFO] Booting worker with pid: 4008
+[2020-03-21 10:52:09 +0530] [4005] [DEBUG] this will show in the log
+[2020-03-21 10:52:09 +0530] [4006] [DEBUG] this will show in the log
+[2020-03-21 10:52:09 +0530] [4007] [DEBUG] this will show in the log
+[2020-03-21 10:52:09 +0530] [4008] [DEBUG] this will show in the log
+[2020-03-21 10:52:11 +0530] [4002] [INFO] Handling signal: int
+[2020-03-21 10:52:11 +0530] [4006] [INFO] Worker exiting (pid: 4006)
+[2020-03-21 10:52:11 +0530] [4008] [INFO] Worker exiting (pid: 4008)
+[2020-03-21 10:52:11 +0530] [4005] [INFO] Worker exiting (pid: 4005)
+[2020-03-21 10:52:11 +0530] [4007] [INFO] Worker exiting (pid: 4007)
+[2020-03-21 10:52:11 +0530] [4002] [INFO] Shutting down: Master
+[2020-03-21 10:53:44 +0530] [4036] [INFO] Starting gunicorn 20.0.4
+[2020-03-21 10:53:44 +0530] [4036] [INFO] Listening at: http://0.0.0.0:9000 (4036)
+[2020-03-21 10:53:44 +0530] [4036] [INFO] Using worker: sync
+[2020-03-21 10:53:44 +0530] [4039] [INFO] Booting worker with pid: 4039
+[2020-03-21 10:53:44 +0530] [4040] [INFO] Booting worker with pid: 4040
+[2020-03-21 10:53:44 +0530] [4041] [INFO] Booting worker with pid: 4041
+[2020-03-21 10:53:44 +0530] [4042] [INFO] Booting worker with pid: 4042
+[2020-03-21 10:53:45 +0530] [4039] [DEBUG] this will show in the log
+[2020-03-21 10:53:45 +0530] [4040] [DEBUG] this will show in the log
+[2020-03-21 10:53:45 +0530] [4041] [DEBUG] this will show in the log
+[2020-03-21 10:53:45 +0530] [4042] [DEBUG] this will show in the log
+[2020-03-21 10:54:10,129] INFO in main: Received index load
+[2020-03-21 10:54:10 +0530] [4041] [INFO] Received index load
+[2020-03-21 10:54:12,722] INFO in main: Received index load
+[2020-03-21 10:54:12 +0530] [4041] [INFO] Received index load
+[2020-03-21 10:56:59 +0530] [4036] [INFO] Handling signal: int
+[2020-03-21 10:56:59 +0530] [4042] [INFO] Worker exiting (pid: 4042)
+[2020-03-21 10:56:59 +0530] [4040] [INFO] Worker exiting (pid: 4040)
+[2020-03-21 10:56:59 +0530] [4039] [INFO] Worker exiting (pid: 4039)
+[2020-03-21 10:56:59 +0530] [4041] [INFO] Worker exiting (pid: 4041)
+[2020-03-21 10:56:59 +0530] [4036] [INFO] Shutting down: Master
