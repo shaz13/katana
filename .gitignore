@@ -1,3 +1,17 @@
+# Created by https://www.gitignore.io/api/linux,macos,flask,python,windows
+# Edit at https://www.gitignore.io/?templates=linux,macos,flask,python,windows
+
+### Flask ###
+instance/*
+!instance/.gitignore
+.webassets-cache
+
+### Flask.Python Stack ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 *.txt
 *.bin
 *.csv
