@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/linux,macos,flask,python,windows
 # Edit at https://www.gitignore.io/?templates=linux,macos,flask,python,windows
 
@@ -232,3 +231,5 @@ $RECYCLE.BIN/
 .env
 
 # End of https://www.gitignore.io/api/linux,macos,flask,python,windows
+
+*.pkl

@@ -1,5 +1,6 @@
 import yaml
 import logging
+import os
 
 from flask import Flask
 from apis import api
@@ -16,4 +17,7 @@ app.logger.debug('this will show in the log')
 api.init_app(app)
 
 if __name__ == '__main__':
+
+    if not os.path.exists("./core/models"):
+        os.makedirs("./core/models", exist_ok=True)
     app.run(debug=config['DEBUG'], host=config['HOST'], port=config['PORT'])
