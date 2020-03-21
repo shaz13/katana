@@ -39,6 +39,7 @@ class Train(Resource):
 
         clf = LogisticRegression(C=0.1, solver='lbfgs')
         clf.fit(X=train[predictors], y=train[response])
+        end_time = datetime.now()
         self._persist_to_disk(clf, MODEL_ROOT / "log_reg.pkl")
         
         validation_predictions = clf.predict_proba(valid[predictors])[:, 1]
