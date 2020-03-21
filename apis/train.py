@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from datetime import datetime
 from flask_restplus import Namespace, Resource, fields
-from apis.config import MODELS_ROOT, TEMP_CSV
+from apis.config import MODEL_ROOT, TEMP_CSV
 
 api = Namespace('train', description='Namespace for training')
 
@@ -33,18 +33,18 @@ class Train(Resource):
             df = pd.read_csv(file)
 
         train, valid = self._split_dataset(df, 0.20, 12345)
-        predictors   = df.columns[:-1]
+        predictors = df.columns[:-1]
         
         clf = LogisticRegression(C=0.1, solver='lbfgs')
         clf.fit(X=train[predictors], y=train[response])
 
-        self._persist_to_disk(clf, MODELS_ROOT)
+        self._persist_to_disk(clf, MODEL_ROOT)
         validation_predictions = clf.predict_proba(valid[predictors])[:, 1]
         score = round(roc_auc_score(valid[[response]], validation_predictions), 3)
 
         return {
             "success": "Training pipeline successful",
-            "msg" : f"Succesfully Trained in {datetime.now() - start_time}", #.seconds
+            "message" : f"Succesfully Trained in {datetime.now() - start_time}", #.seconds
             "metric" : f"roc_auc_score -: {score}",
             "status_code" : 200,
             }
@@ -68,9 +68,9 @@ class Train(Resource):
 
         if os.path.isfile(path_to_file):
             return {
-                "msg" : f"Successfully saved model at {path_to_file} :)"
+                "message" : f"Successfully saved model at {path_to_file} :)"
                 }
         else:
             return {
-                "msg" : "Failed to save the model :("
+                "message" : "Failed to save the model :("
                 }
