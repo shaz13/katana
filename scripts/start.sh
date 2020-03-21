@@ -5,4 +5,3 @@ gunicorn main:app \
     --log-file ./logs/katana.log
     --log-level DEBUG \
     --reload
-
