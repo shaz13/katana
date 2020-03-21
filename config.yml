@@ -11,4 +11,4 @@ DEBUG : False
 # Serving Configurations
 # -----------------------
 HOST : 0.0.0.0
-PORT : 8089
+PORT : 9000

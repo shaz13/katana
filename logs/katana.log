@@ -59,3 +59,20 @@
 [2020-03-21 10:56:59 +0530] [4039] [INFO] Worker exiting (pid: 4039)
 [2020-03-21 10:56:59 +0530] [4041] [INFO] Worker exiting (pid: 4041)
 [2020-03-21 10:56:59 +0530] [4036] [INFO] Shutting down: Master
+[2020-03-21 13:57:18 +0530] [10775] [INFO] Starting gunicorn 20.0.4
+[2020-03-21 13:57:18 +0530] [10775] [INFO] Listening at: http://0.0.0.0:9000 (10775)
+[2020-03-21 13:57:18 +0530] [10775] [INFO] Using worker: sync
+[2020-03-21 13:57:18 +0530] [10778] [INFO] Booting worker with pid: 10778
+[2020-03-21 13:57:18 +0530] [10780] [INFO] Booting worker with pid: 10780
+[2020-03-21 13:57:18 +0530] [10781] [INFO] Booting worker with pid: 10781
+[2020-03-21 13:57:18 +0530] [10782] [INFO] Booting worker with pid: 10782
+[2020-03-21 13:57:18 +0530] [10778] [DEBUG] this will show in the log
+[2020-03-21 13:57:18 +0530] [10780] [DEBUG] this will show in the log
+[2020-03-21 13:57:18 +0530] [10781] [DEBUG] this will show in the log
+[2020-03-21 13:57:18 +0530] [10782] [DEBUG] this will show in the log
+[2020-03-21 13:57:59 +0530] [10775] [INFO] Handling signal: int
+[2020-03-21 13:57:59 +0530] [10780] [INFO] Worker exiting (pid: 10780)
+[2020-03-21 13:57:59 +0530] [10781] [INFO] Worker exiting (pid: 10781)
+[2020-03-21 13:57:59 +0530] [10778] [INFO] Worker exiting (pid: 10778)
+[2020-03-21 13:57:59 +0530] [10782] [INFO] Worker exiting (pid: 10782)
+[2020-03-21 13:57:59 +0530] [10775] [INFO] Shutting down: Master
