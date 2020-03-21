@@ -12,10 +12,10 @@ from apis.config import MODEL_ROOT, TEMP_CSV
 api = Namespace('train', description='Namespace for training')
 
 
-@api.route('/fit')
-class Train(Resource):
+@api.route('/UCIDiabetes')
+class TrainLogisticClassifier(Resource):
 
-    def get(self):
+    def post(self):
         return self.train(target_var="Outcome")
 
     def train(self, file=None, target_var=None):

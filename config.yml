@@ -2,13 +2,6 @@
 # PROJECT NAME : KATANA ML PROD
 # ===============================
 
-
-# Development Configurations
-# ---------------------------
 DEBUG: True
-
-
-# Serving Configurations
-# -----------------------
 HOST: 0.0.0.0
 PORT: 9000
