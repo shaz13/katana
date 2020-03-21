@@ -5,7 +5,7 @@
 
 # Development Configurations
 # ---------------------------
-DEBUG: False
+DEBUG: True
 
 
 # Serving Configurations
