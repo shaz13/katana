@@ -16,11 +16,11 @@ For develoment and testing purposes we recommend using flask serving with debug 
 
 Katana demo API is like at - https://katana-demo.herokuapp.com/
 
-We included three setup instructions;
+We included following setup instructions;
 
 1. Local development 
 2. Docker supported deployement
-3. Heroku build pipeline
+
 
 ### Local Development 👨🏻‍💻
 1. Clone this repo with `git@github.com:shaz13/katana.git`
@@ -44,5 +44,7 @@ $ source activate .env/bin/activate
 3. Run `docker-compose up`
 4. Your local port is mapped and being served at `localhost:9000`
 
-### Heroku Setup
 
+
+## Contributors
+1. Aditya Soni - @AdityaSoni19031997
