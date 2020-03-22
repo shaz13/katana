@@ -1,1 +1,1 @@
-web: gunicorn main:app
+web: gunicorn --log-config gunicorn_logging.conf main:app
