@@ -47,7 +47,8 @@ $ source activate .env/bin/activate
 
 
 ## Contributors
-1. Aditya Soni - @AdityaSoni19031997
+1. Mohammad Shahebaz - @shaz13, @shaz13-socgen 
+2. Aditya Soni - @AdityaSoni19031997
 
 ## License
-TDB
+MIT License
