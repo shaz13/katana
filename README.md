@@ -1,15 +1,14 @@
 # ⚔️ Project Katana - Production ML
 > Katana project is a pre-built bioler plate code for production level model deployement. 
 
-![Katana](screenshots/swagger.png)
-
 ## Features 💫
-1. Flask RestFul at your rescue!
-2. Swagger UI and endpoints structured 
-3. Pre-defined GitHub action integration
-4. Docker and Kubernetes compatible
-5. Production code deployment with `gunicorn`
-6. Awesome logging configurations
+1. Flask Restx at your rescue
+2. Swagger UI and gunicorn integration
+3. Docker ready configuration
+4. Integrated GitHub actions
+5. Almost ready deployement code 🚀
+
+![Katana](screenshots/swagger.png)
 
 ## Set-up Instructions 🕺
 For develoment and testing purposes we recommend using flask serving with debug turned on. However, the code supports `gunicorn` grade serving functionality as well. 
@@ -48,3 +47,6 @@ $ source activate .env/bin/activate
 
 ## Contributors
 1. Aditya Soni - @AdityaSoni19031997
+
+## License
+TDB
