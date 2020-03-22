@@ -7,14 +7,14 @@ from apis.config import MODEL_ROOT
 api = Namespace('inference', description='Namespace for inference')
 
 personModel = api.model('PersonDiabetes', {
-    'Pregnancies': fields.String(required=True),
-    'Glucose': fields.String(required=True),
-    'BloodPressure': fields.String(required=True),
-    'SkinThickness': fields.String(required=True),
-    'Insulin': fields.String(required=True),
-    'BMI': fields.String(required=True),
-    'DiabetesPedigreeFunction': fields.String(required=True),
-    'Age': fields.String(required=True),
+    'Pregnancies': fields.String(required=True, example='2'),
+    'Glucose': fields.String(required=True, example='109'),
+    'BloodPressure': fields.String(required=True, example='92'),
+    'SkinThickness': fields.String(required=True, example='1'),
+    'Insulin': fields.String(required=True, example='1'),
+    'BMI': fields.String(required=True, example='42.7'),
+    'DiabetesPedigreeFunction': fields.String(required=True, example='0.85'),
+    'Age': fields.String(required=True, example='54')
 })
 
 
