@@ -1,4 +1,4 @@
-# ⚔️ Project Katana - Production ML
+# ⚔️ Project Katana - A production ready ML API template
 > Katana project is a pre-built bioler plate code for production level model deployement. Checkout demo at- https://katana-demo.herokuapp.com/
 
 
