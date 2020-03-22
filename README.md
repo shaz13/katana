@@ -1,5 +1,6 @@
 # ⚔️ Project Katana - Production ML
-> Katana project is a pre-built bioler plate code for production level model deployement. 
+> Katana project is a pre-built bioler plate code for production level model deployement. Checkout demo at- https://katana-demo.herokuapp.com/
+
 
 ## Features 💫
 1. Flask Restx at your rescue
@@ -11,9 +12,7 @@
 ![Katana](screenshots/swagger.png)
 
 ## Set-up Instructions 🕺
-For develoment and testing purposes we recommend using flask serving with debug turned on. However, the code supports `gunicorn` grade serving functionality as well. 
-
-Katana demo API is like at - https://katana-demo.herokuapp.com/
+We recommend using flask default serving for development and gunicorn server for production deployment
 
 We included following setup instructions;
 
