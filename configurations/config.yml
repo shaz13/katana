@@ -2,6 +2,11 @@
 # PROJECT NAME : KATANA ML PROD
 # ===============================
 
+# Serving Config
 DEBUG: True
 HOST: 0.0.0.0
 PORT: 9000
+LOGGING_CONFIG : ./configurations/logging.conf
+
+# Model Config
+MODEL_DIR : ./core/models

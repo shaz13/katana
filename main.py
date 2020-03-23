@@ -1,25 +1,24 @@
+import os
 import yaml
 import logging
-import os
 import logging.config
-import yaml
 
 from flask import Flask
 from apis import api
 from apis.config import ColorFormatter
 
-with open(r'config.yml') as file:
+with open(r'./configurations/config.yml') as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
 
 app = Flask(__name__)
 api.init_app(app)
 
-# create logger
 logging.ColorFormatter = ColorFormatter
-logging.config.fileConfig('gunicorn_logging.conf')
+print(config['LOGGING_CONFIG'])
+logging.config.fileConfig(config['LOGGING_CONFIG'])
 
 if __name__ == '__main__':
 
-    if not os.path.exists("./core/models"):
-        os.makedirs("./core/models", exist_ok=True)
+    if not os.path.exists(config['MODEL_DIR']):
+        os.makedirs(config['MODEL_DIR'], exist_ok=True)
     app.run(debug=config['DEBUG'], host=config['HOST'], port=config['PORT'])
