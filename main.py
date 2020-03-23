@@ -14,7 +14,6 @@ app = Flask(__name__)
 api.init_app(app)
 
 logging.ColorFormatter = ColorFormatter
-print(config['LOGGING_CONFIG'])
 logging.config.fileConfig(config['LOGGING_CONFIG'])
 
 if __name__ == '__main__':
