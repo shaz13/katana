@@ -1,12 +1,10 @@
 import yaml
 import logging
-import os
 import logging.config
-import yaml
+import os
 
 from flask import Flask
 from apis import api
-from colored_logging import ColorFormatter
 
 with open(r'config.yml') as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
@@ -14,8 +12,6 @@ with open(r'config.yml') as file:
 app = Flask(__name__)
 api.init_app(app)
 
-# create logger
-logging.ColorFormatter = ColorFormatter
 logging.config.fileConfig('gunicorn_logging.conf')
 
 if __name__ == '__main__':
