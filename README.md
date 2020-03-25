@@ -1,25 +1,24 @@
-# ⚔️ Project Katana 
-> Katana project is a pre-built bioler plate code for production level model deployement. 
-> 
+![Katana](screenshots/katana_cover.png)
+
+## Introduction 🌻
+> **Katana** project is a template for ASAP 🚀 ML application deployment
+>
 > Checkout demo at- https://katana-demo.herokuapp.com/
 
-
-## Features 💫
-1. Flask Restx at your rescue
+### Features 💫
+1. Flask RestX for ReSTFul requests
 2. Swagger UI and gunicorn integration
 3. Docker ready configuration
 4. Integrated GitHub actions
-5. Almost ready deployement code 🚀
+5. Production ready code 🚀
 
-![Katana](screenshots/swagger.png)
-
-## Set-up Instructions 🕺
-We recommend using flask default serving for development and gunicorn server for production deployment
+## Set-up Instructions 🔧
+We recommend using flask default serving for development and gunicorn server for production
 
 We included following setup instructions;
 
 1. Local development 
-2. Docker supported deployement
+2. Docker supported deployment
 
 
 ### Local Development 👨🏻‍💻
@@ -31,7 +30,7 @@ We included following setup instructions;
 $ source activate .env/bin/activate
 
 # Windows
-.\env\Scripts\activate
+$ \.env\Scripts\activate
 ```
 4. Install requirements using `pip install -r requirements.txt`
 5. For debugging run from root - `python main.py`
@@ -44,11 +43,11 @@ $ source activate .env/bin/activate
 3. Run `docker-compose up`
 4. Your local port is mapped and being served at `localhost:9000`
 
+![Katana UI](screenshots/swagger.png)
 
-
-## Contributors
+## Contributors 😎
 1. Mohammad Shahebaz - @shaz13, @shaz13-socgen 
 2. Aditya Soni - @AdityaSoni19031997
 
-## License
+## License 👩🏻‍💼
 MIT License
