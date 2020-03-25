@@ -1,9 +1,9 @@
 import yaml
 import logging
-import logging.config
 import os
+import logging.config
 
-from flask import Flask
+from flask import Flask, render_template
 from apis import api
 
 with open(r'config.yml') as file:
