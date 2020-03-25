@@ -1,4 +1,4 @@
-![Katana](screenshots/katana_cover.png)
+<img width="1280" alt="katana_cover" src="https://user-images.githubusercontent.com/24438869/77542611-78f61b80-6ecc-11ea-9c99-30f1315927b0.png">
 
 ## Introduction 🌻
 > **Katana** project is a template for ASAP 🚀 ML application deployment
@@ -44,7 +44,7 @@ $ \.env\Scripts\activate
 3. Run `docker-compose up`
 4. Your local port is mapped and being served at `localhost:9000`
 
-![Katana UI](screenshots/swagger.png)
+<img width="723" alt="Screenshot 2020-03-25 at 7 12 51 PM" src="https://user-images.githubusercontent.com/24438869/77542726-a216ac00-6ecc-11ea-8a7c-e8cca8fb84d3.png">
 
 ## Contributors 😎
 1. Mohammad Shahebaz - @shaz13, @shaz13-socgen 
