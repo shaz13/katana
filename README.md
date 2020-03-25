@@ -5,12 +5,13 @@
 >
 > Checkout demo at- https://katana-demo.herokuapp.com/
 
-### Features 💫
+### Features 🎉
 1. Flask RestX for ReSTFul requests
 2. Swagger UI and gunicorn integration
-3. Docker ready configuration
-4. Integrated GitHub actions
-5. Production ready code 🚀
+3. Colored logging with custom handlers  
+4. Docker ready configuration
+5. Integrated GitHub actions
+6. Production ready code 🚀
 
 ## Set-up Instructions 🔧
 We recommend using flask default serving for development and gunicorn server for production
