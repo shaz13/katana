@@ -28,7 +28,7 @@ We included following setup instructions;
 3. Activate envrionment using 
 ```
 # Linux / Mac / Unix
-$ source activate .env/bin/activate
+$ source .env/bin/activate
 
 # Windows
 $ \.env\Scripts\activate
