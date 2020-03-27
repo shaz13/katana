@@ -1,4 +1,4 @@
-from flask_restplus import Api
+from flask_restx import Api
 from .train import api as train_ns
 from .inference import api as inference_ns
 from .utils import api as utils_ns
