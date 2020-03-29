@@ -6,7 +6,7 @@ from numpy.random import RandomState
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from datetime import datetime
-from flask_restplus import Namespace, Resource, fields
+from flask_restx import Namespace, Resource, fields
 from apis.config import MODEL_ROOT, TEMP_CSV
 
 api = Namespace('train', description='Namespace for training')
