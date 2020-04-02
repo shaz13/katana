@@ -13,7 +13,7 @@ jobs:
     - uses: actions/stale@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'This issue hasn't received attention for a while. Please attend to it soon. '
-        stale-pr-message: 'This PR hasn't received attention for a while. Please attend to it soon. '
+        stale-issue-message: "This issue hasn't received attention for a while. Can we do something about it? 🙇🏻‍♂️"
+        stale-pr-message: "This PR hasn't received attention and 👩🏻‍💻code love for a while"
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
