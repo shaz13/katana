@@ -16,6 +16,11 @@ api.init_app(app)
 logging.ColorFormatter = ColorFormatter
 logging.config.fileConfig(config['LOGGING_CONFIG'])
 
+if __name__ != '__main__':
+    gunicorn_logger = logging.getLogger("gunicorn.error")
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
+
 if __name__ == '__main__':
 
     if not os.path.exists(config['MODEL_DIR']):

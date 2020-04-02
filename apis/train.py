@@ -1,6 +1,8 @@
 import os
 import pickle
 import pandas as pd
+import logging
+import json
 
 from numpy.random import RandomState
 from sklearn.linear_model import LogisticRegression
@@ -10,7 +12,7 @@ from flask_restx import Namespace, Resource, fields
 from apis.config import MODEL_ROOT, TEMP_CSV
 
 api = Namespace('train', description='Namespace for training')
-
+logging.getLogger("werkzeug")
 
 @api.route('/UCIDiabetes')
 class TrainLogisticClassifier(Resource):
@@ -43,6 +45,17 @@ class TrainLogisticClassifier(Resource):
         score = round(roc_auc_score(
             valid[[response]], validation_predictions), 3)
 
+        msg = {
+            "training_info": {
+                "started_at": str(start_time),
+                "completed_at": str(end_time),
+                "elapsed_time":  str((end_time - start_time).total_seconds())
+            },
+            "model_score": score,
+            "success": "Training pipeline successful"
+        }
+
+        logging.info(json.dumps(msg))
         return {
             "training_info": {
                 "started_at": str(start_time),
@@ -72,6 +85,10 @@ class TrainLogisticClassifier(Resource):
             pickle.dump(classifier, f)
 
         if os.path.isfile(path_to_file):
+            logging.info(json.dumps({
+                "message": f"Successfully saved model at {path_to_file} :)"
+            }))
+            
             return {
                 "message": f"Successfully saved model at {path_to_file} :)"
             }

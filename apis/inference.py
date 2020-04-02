@@ -1,9 +1,13 @@
 import pickle
 import pandas as pd
+import logging
+import json
+
 from flask_restx import Namespace, Resource, fields
 from flask import request
 from apis.config import MODEL_ROOT
 
+logging.getLogger("werkzeug")
 api = Namespace('inference', description='Namespace for inference')
 
 personModel = api.model('PersonDiabetes', {
@@ -25,13 +29,22 @@ class Inference(Resource):
     def post(self):
         data = request.json
         prediction = self.predict(data)
-        return {'success': 'Prediction successful',
-                'probability': str(prediction)
-                }, 200
+        if prediction is not None:
+            return {'success': 'Prediction successful',
+            'probability': str(prediction)
+            }, 200
+        else:
+            return {
+            'failed' : 'Failed to make the inference'
+            }, 404
 
     def predict(self, data):
         # load the model from disk
-        model = pickle.load(open(MODEL_ROOT, 'rb'))
+        try:
+            model = pickle.load(open(MODEL_ROOT, 'rb'))
+        except Exception as e:
+            logging.exception(e, exc_info=True)
+            return 
         print(data)
         instance = pd.DataFrame(data, index=[0])
         probability = round(model.predict_proba(instance)[:, 1][0], 4)
