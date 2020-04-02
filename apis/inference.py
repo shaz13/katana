@@ -7,7 +7,7 @@ from flask_restx import Namespace, Resource, fields
 from flask import request
 from apis.config import MODEL_ROOT
 
-logging.getLogger("werkzeug")
+logger = logging.getLogger("werkzeug")
 api = Namespace('inference', description='Namespace for inference')
 
 personModel = api.model('PersonDiabetes', {
@@ -43,7 +43,7 @@ class Inference(Resource):
         try:
             model = pickle.load(open(MODEL_ROOT, 'rb'))
         except Exception as e:
-            logging.exception(e, exc_info=True)
+            logger.exception(e, exc_info=True)
             return 
         print(data)
         instance = pd.DataFrame(data, index=[0])

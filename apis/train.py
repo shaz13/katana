@@ -12,7 +12,9 @@ from flask_restx import Namespace, Resource, fields
 from apis.config import MODEL_ROOT, TEMP_CSV
 
 api = Namespace('train', description='Namespace for training')
-logging.getLogger("werkzeug")
+#  using a common logger for success/failure/tracebacks
+#  that's how we can fetch a previously defined logger in logging_config files
+logger = logging.getLogger("werkzeug")
 
 @api.route('/UCIDiabetes')
 class TrainLogisticClassifier(Resource):
@@ -55,7 +57,7 @@ class TrainLogisticClassifier(Resource):
             "success": "Training pipeline successful"
         }
 
-        logging.info(json.dumps(msg))
+        logger.info(json.dumps(msg))
         return {
             "training_info": {
                 "started_at": str(start_time),
@@ -85,7 +87,7 @@ class TrainLogisticClassifier(Resource):
             pickle.dump(classifier, f)
 
         if os.path.isfile(path_to_file):
-            logging.info(json.dumps({
+            logger.info(json.dumps({
                 "message": f"Successfully saved model at {path_to_file} :)"
             }))
             
