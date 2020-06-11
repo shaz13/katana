@@ -4,9 +4,9 @@ from .inference import api as inference_ns
 from .utils import api as utils_ns
 
 api = Api(
-    title='Katana ML API Serving 🌻',
-    version='0.5',
-    description='A production ready model deployment template',
+    title="Katana ML API Serving 🌻",
+    version="0.5",
+    description="A production ready model deployment template",
 )
 
 api.add_namespace(train_ns)
