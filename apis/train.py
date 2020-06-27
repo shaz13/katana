@@ -1,4 +1,3 @@
-
 from flask_restx import Namespace, Resource, fields
 from core.training import TrainLogisticClassifier
 
