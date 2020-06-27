@@ -17,3 +17,6 @@ jobs:
         stale-pr-message: "This PR hasn't received attention and 👩🏻‍💻code love for a while"
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
+        days-before-stale: 90
+        days-before-close: 600
+        operations-per-run: 30
