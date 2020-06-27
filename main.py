@@ -5,7 +5,7 @@ import logging.config
 
 from flask import Flask
 from apis import api
-from apis.config import ColorFormatter
+from configurations.config import ColorFormatter
 
 with open(r"./configurations/config.yml") as file:
     config = yaml.load(file, Loader=yaml.FullLoader)

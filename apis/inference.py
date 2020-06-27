@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 from flask_restx import Namespace, Resource, fields
 from flask import request
-from apis.config import MODEL_ROOT
+from configurations.config import MODEL_ROOT, TEMP_CSV
 
 api = Namespace("inference", description="Namespace for inference")
 
