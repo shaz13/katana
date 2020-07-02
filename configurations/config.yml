@@ -5,7 +5,7 @@
 # Serving Config
 DEBUG: True
 HOST: 0.0.0.0
-PORT: 8080
+PORT: 9000
 LOGGING_CONFIG : ./configurations/logging.conf
 DEFAULT_API_VERSION : 1 
 # Model Config
