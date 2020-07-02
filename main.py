@@ -14,9 +14,11 @@ app = Flask(__name__)
 app.register_blueprint(api, url_prefix='/api/v1')
 logging.ColorFormatter = ColorFormatter
 logging.config.fileConfig(config["LOGGING_CONFIG"])
+DEFAULT_API_VERSION = config['DEFAULT_API_VERSION']
 
+# Redirect to default namespace version
 @app.route('/')
-def redirect_default_version(default_version=config['DEFAULT_API_VERSION']):
+def redirect_default_version(default_version=DEFAULT_API_VERSION):
     return redirect(f"/api/v{default_version}", code=302)
 
 if __name__ == "__main__":
