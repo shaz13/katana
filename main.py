@@ -3,18 +3,21 @@ import yaml
 import logging
 import logging.config
 
-from flask import Flask
-from apis import api
+from flask import Flask, redirect
+from apis import blueprint as api
 from configurations.config import ColorFormatter
 
 with open(r"./configurations/config.yml") as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
 
 app = Flask(__name__)
-api.init_app(app)
-
+app.register_blueprint(api, url_prefix='/api/v1')
 logging.ColorFormatter = ColorFormatter
 logging.config.fileConfig(config["LOGGING_CONFIG"])
+
+@app.route('/')
+def redirect_default_version(default_version=config['DEFAULT_API_VERSION']):
+    return redirect(f"/api/v{default_version}", code=302)
 
 if __name__ == "__main__":
 
