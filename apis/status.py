@@ -1,7 +1,7 @@
 from flask import request
 from flask_restx import Namespace, Resource, fields
 
-api = Namespace("status", description="Namespace for utils")
+api = Namespace("status", description="Namespace for API health status")
 
 
 @api.route("/isup")
