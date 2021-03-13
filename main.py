@@ -1,28 +1,12 @@
-import os
-import yaml
-import logging
-import logging.config
+from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
+from apis.v1.iris import router as iris_ns
 
-from flask import Flask, redirect
-from apis import blueprint as api
-from configurations.config import ColorFormatter
 
-with open(r"./configurations/config.yml") as file:
-    config = yaml.load(file, Loader=yaml.FullLoader)
+app = FastAPI(title="Katana Fast API Serving", version=1.0)
 
-app = Flask(__name__)
-app.register_blueprint(api, url_prefix='/api/v1')
-logging.ColorFormatter = ColorFormatter
-logging.config.fileConfig(config["LOGGING_CONFIG"])
-DEFAULT_API_VERSION = config['DEFAULT_API_VERSION']
+app.include_router(iris_ns)
 
-# Redirect to default namespace version
-@app.route('/')
-def redirect_default_version(default_version=DEFAULT_API_VERSION):
-    return redirect(f"/api/v{default_version}", code=302)
-
-if __name__ == "__main__":
-
-    if not os.path.exists(config["MODEL_DIR"]):
-        os.makedirs(config["MODEL_DIR"], exist_ok=True)
-    app.run(debug=config["DEBUG"], host=config["HOST"], port=config["PORT"])
+@app.get("/", tags=['redirect'])
+async def redirect():
+    return RedirectResponse("/docs")
