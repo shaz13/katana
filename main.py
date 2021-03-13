@@ -7,6 +7,7 @@ app = FastAPI(title="Katana Fast API Serving", version=1.0)
 
 app.include_router(iris_ns)
 
-@app.get("/", tags=['redirect'])
+
+@app.get("/", tags=["redirect"])
 async def redirect():
     return RedirectResponse("/docs")

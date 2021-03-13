@@ -26,6 +26,7 @@ from core.datasets import IrisDatasetLoader
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 
+
 class IrisTrainerInstance:
     def __init__(self):
         pass
@@ -39,5 +40,5 @@ class IrisTrainerInstance:
             X, y = self.data.load_data()
             logreg.fit(X, y)
         except Exception as e:
-            raise(e)
+            raise (e)
         return logreg
