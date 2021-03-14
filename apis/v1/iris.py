@@ -13,9 +13,7 @@ trainer.load_data()
 iris_model = trainer.train()
 
 
-@router.post(
-    "/trainModel", tags=["iris"], response_model=TrainingStatusResponse
-)
+@router.post("/trainModel", tags=["iris"], response_model=TrainingStatusResponse)
 async def iris_train():
     training_id = uuid.uuid1()
     # Queue training / start training via RabbitMQ, Queue, etc..
