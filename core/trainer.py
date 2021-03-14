@@ -1,6 +1,7 @@
 from loguru import logger
-from core.datasets import IrisDatasetLoader
+from core.datasets import IrisDatasetLoader, BostonDatasetLoader
 from sklearn import svm
+from sklearn.linear_model import LinearRegression
 
 
 class IrisTrainerInstance:
@@ -20,3 +21,14 @@ class IrisTrainerInstance:
         except Exception as e:
             raise (e)
         return classifier
+
+
+class BostonHousePriceTrainerInstance:
+    def __init__(self):
+        self.dataloder = BostonDatasetLoader()
+
+    def train(self):
+        self.X, self.y = self.dataloder.load_data()
+        model = LinearRegression()
+        model.fit(self.X, self.y)
+        return model

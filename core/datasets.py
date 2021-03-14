@@ -11,6 +11,11 @@ class IrisDatasetLoader:
         return X, y
 
 
-if __name__ == "__main__":
-    dataset_loader = IrisDatasetLoader()
-    print(dataset_loader.load_data())
+class BostonDatasetLoader:
+    def __init__(self):
+        self.X = None
+        self.y = None
+
+    def load_data(self):
+        self.X, self.y = datasets.load_boston(return_X_y=True)
+        return self.X, self.y

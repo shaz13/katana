@@ -5,4 +5,4 @@ services:
     container_name : katana-fastapi
     restart : always
     ports:
-      - "9000:9000"
+      - "8000:8000"
