@@ -6,15 +6,14 @@
 > Checkout demo at- https://katana-demo.herokuapp.com/
 
 ### Features 🎉
-1. Flask RestX for ReSTFul requests
-2. Swagger UI and gunicorn integration
-3. Colored logging with custom handlers  
-4. Docker ready configuration
-5. Integrated GitHub actions
-6. Production ready code 🚀
+1. FastAPI inbuilt
+2. Swagger UI and uvicorn integration
+3. Docker ready configuration
+4. Integrated GitHub actions
+5. Production ready code 🚀
 
 ## Set-up Instructions 🔧
-We recommend using flask default serving for development and gunicorn server for production
+We recommend using flask default serving for development and uvicorn server for production
 
 We included following setup instructions;
 
@@ -35,7 +34,7 @@ $ \.env\Scripts\activate
 ```
 4. Install requirements using `pip install -r requirements.txt`
 5. For debugging run from root - `python main.py`
-6. Deploy using `Procfile` or `bash scripts/start.sh`
+6. Deploy using `Procfile` or `bash scripts/launch.sh`
 7. Your API is being served at `localhost:9000`
 
 ### Docker Setup ⛴
@@ -47,7 +46,7 @@ $ \.env\Scripts\activate
 <img width="723" alt="Screenshot 2020-03-25 at 7 12 51 PM" src="https://user-images.githubusercontent.com/24438869/77542726-a216ac00-6ecc-11ea-8a7c-e8cca8fb84d3.png">
 
 ## Contributors 😎
-1. Mohammad Shahebaz - @shaz13, @shaz13-socgen 
+1. Mohammad Shahebaz - @shaz13
 2. Aditya Soni - @AdityaSoni19031997
 
 ## License 👩🏻‍💼
