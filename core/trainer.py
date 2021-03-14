@@ -1,3 +1,4 @@
+from loguru import logger
 from core.datasets import IrisDatasetLoader
 from sklearn import svm
 
@@ -12,7 +13,9 @@ class IrisTrainerInstance:
     def train(self):
         try:
             classifier = svm.SVC()
+            logger.info("Fetching dataset")
             X, y = self.data.load_data()
+            logger.info("Training SVC Model on Iris data")
             classifier.fit(X, y)
         except Exception as e:
             raise (e)

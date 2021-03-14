@@ -1,3 +1,4 @@
+import uuid
 from fastapi.routing import APIRouter
 from apis.models.iris import IrisFlowerRequestModel
 from apis.models.iris import IrisPredictionResponseModel
@@ -12,12 +13,16 @@ trainer.load_data()
 iris_model = trainer.train()
 
 
-@router.post("/trainModel",
-             tags=["iris"],
-             response_model=TrainingStatusResponse)
+@router.post(
+    "/trainModel", tags=["iris"], response_model=TrainingStatusResponse
+)
 async def iris_train():
+    training_id = uuid.uuid1()
+    # Queue training / start training via RabbitMQ, Queue, etc..
+    # Add task here
+    # Track the id in a database
     return {
-        "training_id": "056b5d3d-f983-4cd3-8fbd-20b8dad24e0f",
+        "training_id": training_id,
         "status": "Training started",
     }
 
@@ -26,9 +31,12 @@ async def iris_train():
     "/predictFlower", tags=["iris"], response_model=IrisPredictionResponseModel
 )
 async def iris_prediction(iris: IrisFlowerRequestModel):
-    payload = [iris.sepal_length,
-               iris.sepal_width, iris.petal_length,
-               iris.petal_width]
+    payload = [
+        iris.sepal_length,
+        iris.sepal_width,
+        iris.petal_length,
+        iris.petal_width,
+    ]
     prediction = iris_model.predict([payload])
     target = labels[prediction[0]]
     result = {"prediction_id": iris.prediction_id, "classification": target}
