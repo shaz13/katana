@@ -5,9 +5,9 @@ name: Katana API Setup Build
 
 on:
   push:
-    branches: [ master, develop ]
+    branches: [ develop ]
   pull_request:
-    branches: [ develop, master]
+    branches: [ master]
 
 jobs:
   build:
