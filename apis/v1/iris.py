@@ -1,6 +1,7 @@
 from fastapi.routing import APIRouter
 from apis.models.iris import IrisFlowerRequestModel
 from apis.models.iris import IrisPredictionResponseModel
+from apis.models.base import TrainingStatusResponse
 from core.trainer import IrisTrainerInstance
 
 router = APIRouter(prefix="/iris")
@@ -14,6 +15,7 @@ iris_model = trainer.train_linear_model()
 @router.post(
     "/trainModel",
     tags=["iris"],
+    response_model=TrainingStatusResponse
 )
 async def iris_train():
     return {
@@ -22,7 +24,7 @@ async def iris_train():
     }
 
 
-@router.post("/predictClass",
+@router.post("/predictFlower",
              tags=["iris"],
              response_model=IrisPredictionResponseModel)
 async def iris_prediction(iris: IrisFlowerRequestModel):
