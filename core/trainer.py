@@ -1,5 +1,5 @@
 from core.datasets import IrisDatasetLoader
-from sklearn.linear_model import LogisticRegression
+from sklearn import svm
 
 
 class IrisTrainerInstance:
@@ -9,11 +9,11 @@ class IrisTrainerInstance:
     def load_data(self):
         self.data = IrisDatasetLoader()
 
-    def train_linear_model(self):
+    def train(self):
         try:
-            logreg = LogisticRegression(random_state=13)
+            classifier = svm.SVC()
             X, y = self.data.load_data()
-            logreg.fit(X, y)
+            classifier.fit(X, y)
         except Exception as e:
             raise (e)
-        return logreg
+        return classifier
