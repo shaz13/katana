@@ -43,7 +43,8 @@ $ \.env\Scripts\activate
 3. Run `docker-compose up`
 4. Your local port is mapped and being served at `localhost:9000`
 
-![Capture](https://user-images.githubusercontent.com/24438869/111058838-351e6c80-84b7-11eb-916e-bdc191b0a916.PNG)
+![Capture](https://user-images.githubusercontent.com/24438869/111058914-bd9d0d00-84b7-11eb-9d3c-ecd2e4331013.PNG)
+
 
 
 ## Contributors 😎
