@@ -15,7 +15,7 @@ class IrisTrainerInstance:
             classifier = svm.SVC()
             logger.info("Fetching dataset")
             X, y = self.data.load_data()
-            logger.info("Training SVC Model on Iris data")
+            logger.info("Training SVC Model")
             classifier.fit(X, y)
         except Exception as e:
             raise (e)
