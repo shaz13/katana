@@ -1,4 +1,5 @@
 <img width="1280" alt="Katana Cover" src="https://user-images.githubusercontent.com/24438869/111058809-03a5a100-84b7-11eb-958a-a846b1a277b1.png">
+
 ## Introduction 🌻
 > **Katana** project is a template for ASAP 🚀 ML application deployment
 >
