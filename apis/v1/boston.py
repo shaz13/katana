@@ -7,7 +7,7 @@ from core.trainer import BostonHousePriceTrainerInstance
 
 router = APIRouter(prefix="/boston")
 # Load trained model. Dummy model being trained on startup...
-logger.info("Training/Loading iris classification model")
+logger.info("Training/Loading boston linear reg model")
 trainer = BostonHousePriceTrainerInstance()
 boston_model = trainer.train()
 logger.info("Training completed")
