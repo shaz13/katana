@@ -3,3 +3,5 @@ flake8==3.8.4
 loguru==0.5.3
 scikit-learn==0.24.1
 uvicorn==0.13.4
+transformers==4.21.0
+torch==1.12.0

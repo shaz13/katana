@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from apis.v1.iris import router as iris_ns
 from apis.v1.boston import router as boston_ns
+from apis.v1.masklang import router as masklang_ns
 
 # Initialize logging
 logger.add("./logs/katana.log", rotation="500 MB")
@@ -17,6 +18,8 @@ logger.info("Adding Iris namespace route")
 app.include_router(iris_ns)
 logger.info("Adding Boston namespace route")
 app.include_router(boston_ns)
+logger.info("Adding Mask Lang namespace route")
+app.include_router(masklang_ns)
 
 
 @app.get("/", include_in_schema=False)
