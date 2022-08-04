@@ -18,8 +18,7 @@ class BostonHouseRequestModel(BaseModel):
     9. RAD       index of accessibility to radial highways
     10. TAX      full-value property-tax rate per $10,000
     11. PTRATIO  pupil-teacher ratio by town
-    12. B        1000(Bk - 0.63)^2 where Bk is the proportion of blacks
-                 by town
+    12. B        1000(Bk - 0.63)^2 Biased variable
     13. LSTAT    % lower status of the population
     """
 
@@ -70,8 +69,7 @@ class BostonHouseRequestModel(BaseModel):
     )
     discriminateProportion: float = Field(
         example=396.30,
-        description="1000(Bk - 0.63)^2 where Bk is the proportion \
-                     of colored by town",
+        description="Discriminate proportion",
     )
     percentLowerStatPopulation: float = Field(
         example=4.30,

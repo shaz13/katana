@@ -5,7 +5,7 @@ from core.pipeline import MaskLanguageModelPipe
 from apis.models.base import TrainingStatusResponse
 from apis.models.masklang import (
     MaskLanguageModelRequestModel,
-    MaskLanguageModelResponseModel
+    MaskLanguageModelResponseModel,
 )
 from typing import List
 
