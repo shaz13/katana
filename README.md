@@ -3,7 +3,6 @@
 ## Introduction 🌻
 > **Katana** project is a template for ASAP 🚀 ML application deployment
 >
-> Checkout demo at- https://katana-demo.herokuapp.com/
 
 ### Features 🎉
 1. FastAPI inbuilt
