@@ -7,15 +7,13 @@ from core.trainer import BostonHousePriceTrainerInstance
 
 router = APIRouter(prefix="/boston")
 # Load trained model. Dummy model being trained on startup...
-logger.info("Training/Loading iris classification model")
+logger.info("Training/Loading boston linear reg model")
 trainer = BostonHousePriceTrainerInstance()
 boston_model = trainer.train()
 logger.info("Training completed")
 
 
-@router.post(
-    "/trainModel", tags=["boston"], response_model=TrainingStatusResponse
-)
+@router.post("/trainModel", tags=["boston"], response_model=TrainingStatusResponse)
 async def boston_train():
     training_id = uuid.uuid1()
     # Queue training / start training via RabbitMQ, Queue, etc..
@@ -27,9 +25,7 @@ async def boston_train():
     }
 
 
-@router.post(
-    "/predictPrice", tags=["boston"], response_model=BostonHouseResponseModel
-)
+@router.post("/predictPrice", tags=["boston"], response_model=BostonHouseResponseModel)
 async def boston_price_prediction(body: BostonHouseRequestModel):
     request = body.dict()
     payload = [x for x in request.values()]
